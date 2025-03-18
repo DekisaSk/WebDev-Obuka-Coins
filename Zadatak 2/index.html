@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Item Lister</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Item Lister</h1>
+      <input type="text" placeholder="Search Items..." id="searchBar" />
+    </header>
+    <main>
+      <h2>Add Items</h2>
+      <div>
+        <input type="text" id="textBoxNewItem" />
+        <button id="buttonSubmit">Submit</button>
+      </div>
+
+      <section>
+        <h3>Items</h3>
+        <ul id="itemList">
+          <li>
+            <p>Item 1</p>
+            <button id="buttonDelete">x</button>
+          </li>
+          <li>
+            <p>Item 2</p>
+            <button id="buttonDelete">x</button>
+          </li>
+          <li>
+            <p>Item 3</p>
+            <button id="buttonDelete">x</button>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

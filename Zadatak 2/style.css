@@ -1,0 +1,24 @@
+body {
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #7bc96f;
+  color: white;
+  font-size: larger;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 2rem;
+  float: left;
+}
+
+#searchBar {
+  padding: 1rem;
+  margin: 2rem;
+  float: right;
+  width: 40%;
+}
