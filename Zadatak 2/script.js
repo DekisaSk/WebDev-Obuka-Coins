@@ -9,7 +9,7 @@ document.getElementById("searchBar").addEventListener("keyup", function () {
     items.forEach((item) => {
       let p = item.getElementsByTagName("p")[0];
       let itemName = p.textContent.toLowerCase();
-      if (itemName !== searchItem) {
+      if (!itemName.includes(searchItem)) {
         item.style.display = "none";
       } else {
         item.style.display = "flex";
