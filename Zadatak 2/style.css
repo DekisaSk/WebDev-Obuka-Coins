@@ -92,6 +92,6 @@ header h1 {
   cursor: pointer;
 }
 
-#buttonDelete:hover {
+.buttonDelete:hover {
   background: darkred;
 }
