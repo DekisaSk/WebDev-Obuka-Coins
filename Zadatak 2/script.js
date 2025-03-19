@@ -1,9 +1,5 @@
-document.getElementById("searchBar").addEventListener("keypress", function (e) {
+document.getElementById("searchBar").addEventListener("keyup", function () {
   let searchItem = this.value.toLowerCase();
-
-  if (e.key !== "Enter") {
-    return;
-  }
 
   let items = Array.from(
     document.getElementById("itemList").getElementsByTagName("li")
@@ -36,6 +32,13 @@ document.getElementById("itemList").addEventListener("click", function (event) {
     event.target.closest("li").remove();
   }
 });
+
+// Does not work for newly added items
+// document.querySelectorAll(".buttonDelete").forEach(function (el) {
+//   el.addEventListener("click", function () {
+//     this.parentNode.remove();
+//   });
+// });
 
 function isNullOrEmpty(str) {
   return str == null || str.trim() == "";
