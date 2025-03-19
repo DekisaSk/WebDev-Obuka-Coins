@@ -22,3 +22,71 @@ header h1 {
   float: right;
   width: 40%;
 }
+
+.mainSection {
+  padding: 1rem;
+  margin: 0.5rem 2rem 0rem 2rem;
+  border: 0.1rem solid #d3d3d3;
+}
+
+.add-new-item {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+#textBoxNewItem {
+  border-radius: 0;
+  border: 0.1rem solid #d3d3d3;
+  width: 20%;
+  height: 1.5rem;
+  float: left;
+}
+
+#buttonSubmit {
+  margin-left: 0.5rem;
+  font-size: 16px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  float: left;
+}
+
+#buttonSubmit:hover {
+  background-color: #7bc96f;
+}
+
+.sectionItemList {
+  margin-top: 0.5rem;
+  color: black;
+}
+
+#itemList {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+#itemList li {
+  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 0.1rem solid #d3d3d3;
+  border-left: 0.1rem solid #d3d3d3;
+  border-right: 0.1rem solid #d3d3d3;
+}
+
+#buttonDelete {
+  text-align: center;
+  background: lightcoral;
+  color: white;
+  font-weight: bold;
+  width: auto;
+  height: auto;
+  border: none;
+  cursor: pointer;
+}
+
+#buttonDelete:hover {
+  background: darkred;
+}
