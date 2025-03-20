@@ -30,7 +30,7 @@ export function createMovieElement(movie) {
   let movieTitle = createTextElement(HTML.H3, movie.title);
   let movieYear = createTextElement(HTML.P, movie.year);
   let movieGenre = createTextElement(HTML.P, movie.genre);
-  let movieRating = createTextElement(HTML.P, movie.rating);
+  let movieRating = createTextElement(HTML.P, movie.imdb_rating);
 
   // Append to container
   container.appendChild(movieTitle);

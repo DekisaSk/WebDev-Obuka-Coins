@@ -1,12 +1,68 @@
-.movieCard {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
+body {
+  background-color: white;
+  font-family: sans-serif;
 }
 
-.movieCard:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.container {
-  padding: 2px 16px;
+#buttonSearch {
+  margin-top: 1rem;
+  padding: 0.5rem 0.5rem;
+  font-size: 16px;
+  color: white;
+  background-color: blue;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+#buttonSearch:hover {
+  background-color: darkblue;
+}
+
+#searchBar {
+  padding: 1rem;
+  width: 20%;
+}
+
+#mainSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 100%;
+  margin: 4rem;
+}
+
+#movieCard {
+  max-width: 20%;
+  max-height: fit-content;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#movieCard img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.2rem;
+}
+#movieCard h3,
+#movieCard p {
+  text-align: left;
+  margin-left: 0.5rem;
+}
+#movieCard h3 {
+  margin-top: 0.5rem;
+}
+#movieCard p {
+  font-size: 0.8rem;
+  color: gray;
 }
