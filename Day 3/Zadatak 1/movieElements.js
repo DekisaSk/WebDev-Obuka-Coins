@@ -18,29 +18,23 @@ export function createMovieElement(movie) {
   }
 
   // Create MovieCard
-  let movieCard = createElement(HTML.DIV, "id", "movieCard");
+  let movieCard = createElement(HTML.DIV, "class", "movieCard");
 
   // Create Movie Poster
   let moviePoster = createElement(HTML.IMG, "src", movie.img);
 
-  // Create Container for movie
-  let container = createElement(HTML.DIV, "id", "container");
-
   // Create movie information elements
   let movieTitle = createTextElement(HTML.H3, movie.title);
-  let movieYear = createTextElement(HTML.P, movie.year);
-  let movieGenre = createTextElement(HTML.P, movie.genre);
-  let movieRating = createTextElement(HTML.P, movie.imdb_rating);
+  let movieYear = createTextElement(HTML.P, `Year: ${movie.year}`);
+  let movieGenre = createTextElement(HTML.P, `Genre: ${movie.genre}`);
+  let movieRating = createTextElement(HTML.P, `Rating: ${movie.imdb_rating}`);
 
-  // Append to container
-  container.appendChild(movieTitle);
-  container.appendChild(movieYear);
-  container.appendChild(movieGenre);
-  container.appendChild(movieRating);
-
-  // Append poster and container to movieCard
+  // Append to movie card
   movieCard.appendChild(moviePoster);
-  movieCard.appendChild(container);
+  movieCard.appendChild(movieTitle);
+  movieCard.appendChild(movieYear);
+  movieCard.appendChild(movieGenre);
+  movieCard.appendChild(movieRating);
 
   return movieCard;
 }

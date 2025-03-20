@@ -9,17 +9,11 @@ const fetchMovies = function (url, errorMsg = "Something went wrong") {
 };
 
 function populateMovies(movies) {
-  console.log("populate");
   let mainSection = document.getElementById("mainSection");
-  console.log(mainSection);
-  for (let index = 0; index < movies.length; index++) {
-    const movie = movies[index];
 
-    console.log("foreach");
-    const temp = createMovieElement(movie);
-    console.log(temp);
-    mainSection.appendChild(temp);
-  }
+  movies.forEach((movie) => {
+    mainSection.appendChild(createMovieElement(movie));
+  });
 }
 
 const fetchAndPopulateMovies = function () {
@@ -27,19 +21,32 @@ const fetchAndPopulateMovies = function () {
     "https://jsonblob.com/api/jsonBlob/1351950892655632384/",
     "Targeted Movies URL Not found"
   ).then((data) => {
-    console.log("data");
     populateMovies(data.movies);
   });
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("Loaded");
   fetchAndPopulateMovies();
 });
 
 document.getElementById("buttonSearch").addEventListener("click", function () {
-  let searchItem = document
-    .getElementById("serachBar")
-    .textContent.toLowerCase();
-  // filter based on title, genre
+  let searchFilter = document
+    .querySelector("input[type='text']")
+    .value.toLowerCase();
+  let movies = Array.from(document.querySelectorAll("#mainSection .movieCard"));
+
+  if (!searchFilter) {
+    movies.forEach((movie) => (movie.style.display = "flex"));
+    return;
+  }
+
+  movies.forEach((movie) => {
+    const title = movie.querySelector("h3").textContent.toLowerCase();
+    const genre = movie.querySelectorAll("p")[1]?.textContent.toLowerCase();
+
+    movie.style.display =
+      title.includes(searchFilter) || genre?.includes(searchFilter)
+        ? "flex"
+        : "none";
+  });
 });

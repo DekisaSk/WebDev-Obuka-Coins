@@ -38,7 +38,7 @@ header {
   margin: 4rem;
 }
 
-#movieCard {
+.movieCard {
   max-width: 20%;
   max-height: fit-content;
   background: white;
@@ -49,20 +49,24 @@ header {
   flex-direction: column;
   align-items: flex-start;
 }
-#movieCard img {
+
+.movieCard img {
   width: 100%;
   height: 100%;
   border-radius: 0.2rem;
 }
-#movieCard h3,
-#movieCard p {
+
+.movieCard h3,
+.movieCard p {
   text-align: left;
   margin-left: 0.5rem;
 }
-#movieCard h3 {
+
+.movieCard h3 {
   margin-top: 0.5rem;
 }
-#movieCard p {
+
+.movieCard p {
   font-size: 0.8rem;
   color: gray;
 }
