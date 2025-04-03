@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+httpx
+jinja2
+aiofiles
+requests
+pydantic
+starlette
+passlib
+redis
+bcrypt
